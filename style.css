@@ -1,0 +1,697 @@
+:root{
+
+    --rosa:#E000D3;
+    --amarillo:#FCD90D;
+    --rosa-claro:#FCE4EC;
+    --rosa-hover:#EC407A;
+
+    --blanco:#FFFFFF;
+    --gris:#555;
+    --gris-claro:#888;
+
+    --fondo:#FFF7FA;
+
+    --sombra:0px 10px 30px rgba(0, 0, 0, 0.073);
+
+    --transicion:.4s;
+
+    --borde:18px;
+}
+
+
+/* --------------- */
+.header{
+
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background:white;
+    box-shadow:var(--sombra);
+    z-index:1000;
+
+}
+
+.navbar{
+
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+
+}
+
+.logo{
+    height: 4rem;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    color:var(--rosa);
+    font-weight:500;
+    transition:var(--transicion);
+    text-decoration:none;
+    font-family: "Poppins"
+}
+ul{
+    list-style:none;
+}
+
+.nav-links a:hover{
+    color:var(--amarillo);
+}
+
+.menu{
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/*------------------------*/
+.hero{
+    width:100px;
+    height:100px;
+    background:white;
+    position:relative;
+    overflow:hidden;
+}
+
+.bg-shape{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    height:100%;
+    transform: rotate(180deg);
+}
+
+.imagen-deinicio{
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    animation: zoomIn 2s ease forwards;
+}
+
+@keyframes zoomIn{
+    from{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+
+/*------------------------*/
+
+
+.contador {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.contador-item {
+    max-width: 300px;
+    margin: auto;
+}
+
+.cz_counter_num {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: "Poppins";
+    color: #00E0C6;
+    margin-bottom: 10px;
+}
+.cz_counter_num::after{
+    content: "+";
+    margin-left: 2px;
+    color: inherit;
+}
+.contador-item p {
+    font-size: 20px;
+    color: #666666;
+    font-family: "Poppins";
+}
+
+/*------------------------*/
+
+.sobre-mi {
+  justify-content:center;
+}
+
+.tarjetas {
+  display: flex;
+  justify-content:center;
+  padding-top:65px;
+}
+
+.tarjeta{
+  margin: 40px 5%;
+  padding: 1px 40px;
+  border-radius: 12px 30px;
+  width: 550px;
+  height: 550px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.493);
+  background-image: url(imagenes/patron.png);
+  background-size: 650px 580px;
+   background-repeat: no-repeat;
+}
+
+
+.tarjeta h3{
+    color:var(--amarillo);
+    font-family: "Poppins";
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.tarjeta h4{
+    font-size: 15px;
+    color: #000000;
+    text-align: justify;
+    margin-top: 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#imagenerika{
+    padding-top: 30px;
+    width:550px;
+    height: 550px;
+}
+
+.boton{
+   text-align: center;
+   padding-top: 20px;
+}
+
+.boton button{
+    background: var(--rosa);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .35s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    margin-left: 20px;
+}
+
+#btnAbrir:hover{
+    transform: translateY(-8px);
+    background-color: #00E0C6;
+}
+
+
+/*------------------------*/
+
+/*------------------------*/
+
+#tituloCarrusel{
+    color:#00E0C6;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 60px;
+    margin-top: 100px;
+    background-image: url();
+    background-size: 1400px 120px;
+
+}
+.container{
+    position:relative;
+    width:100%;
+    height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective:1300px;
+}
+.carousel{
+    position:relative;
+    width:250px;
+    height:350px;
+    transform-style:preserve-3d;
+}
+
+.card{
+    position:absolute;
+    width:250px;
+    height:250px;
+    border-radius:15px;
+    overflow:hidden;
+    transition:1s;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.botones{
+    position:absolute;
+    bottom:80px;
+    display:flex;
+    gap:100px;
+}
+.botones button{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:2px solid #00E0C6;
+    background-color:#00E0C6;
+    font-size:28px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.botones button:hover{
+    background:white;
+    color:black;
+    transform:scale(1.1);
+}
+
+
+
+/*------------------------*/
+.footer{
+    background:var(--rosa);
+    color: white;
+    padding: 60px 10%;
+    font-family: "Poppins";
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 80px;
+}
+
+.footer-section h3{
+    margin-bottom: 20px;
+    color: #FCD90D;
+    margin-left: 80px;
+}
+
+.footer-logo{
+    color: var(--amarillo);
+    margin-bottom: 20px;
+}
+
+.footer-section p{
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.footer-section ul{
+    list-style: none;
+    margin-left: 60px;
+}
+
+.footer-section ul li{
+    margin-bottom: 12px;
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer-section a:hover{
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.socials{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.socials a{
+    background: #222;
+    padding: 10px 18px;
+    border-radius: 30px;
+}
+
+.socials a:hover{
+    background: #ffffff;
+    color: #000000;
+}
+
+.footer-bottom{
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/*-----------------*/
+
+/* ========================================= */
+/* TABLETS */
+/* ========================================= */
+
+@media (max-width: 992px){
+
+    html, body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        padding:20px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    /* -------- INICIO -------- */
+
+    .inicio{
+        min-height:80vh;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .imagen-deinicio{
+        width:320px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+    }
+
+    .bg-shape{
+        width:120%;
+        left:-15%;
+    }
+
+    .bg-shape1{
+        width:120%;
+        right:-15%;
+    }
+
+    /* -------- CONTADOR -------- */
+
+    .contador{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:40px;
+        padding:50px 20px;
+    }
+
+    .tarjeta{
+        width:90%;
+    }
+
+    #imagenerika{
+        width:450px;
+        max-width:100%;
+    }
+
+    #tituloCarrusel{
+        font-size:45px;
+    }
+}
+
+/* ========================================= */
+/* MOVILES */
+/* ========================================= */
+
+@media (max-width:768px){
+
+    html,
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    .logo{
+        height:3rem;
+    }
+
+    /* -------- INICIO -------- */
+
+    .inicio{
+        height:65vh;
+        min-height:500px;
+        overflow:hidden;
+        position:relative;
+    }
+
+    .imagen-deinicio{
+        width:230px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        z-index:10;
+    }
+
+    .bg-shape{
+        width:150%;
+        height:100%;
+        left:-45%;
+        top:0;
+    }
+
+    .bg-shape1{
+        width:150%;
+        height:100%;
+        right:-45%;
+        top:0;
+    }
+
+    /* -------- CONTADOR -------- */
+
+    .contador{
+        flex-direction:column;
+        align-items:center;
+        gap:40px;
+        padding:50px 0;
+    }
+
+    .contador-item{
+        width:100%;
+    }
+
+    .cz_counter_num{
+        font-size:45px;
+    }
+
+    /* -------- SOBRE MI -------- */
+
+    .tarjetas{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .tarjeta{
+        width:95%;
+        padding:25px;
+        margin:20px auto;
+    }
+
+    .tarjeta h3{
+        text-align:center;
+        font-size:30px;
+    }
+
+    .tarjeta h4{
+        font-size:14px;
+    }
+
+    #imagenerika{
+        width:100%;
+        max-width:350px;
+        height:auto;
+    }
+
+    /* -------- CARRUSEL -------- */
+
+    #tituloCarrusel{
+        font-size:36px;
+    }
+
+    .container{
+        height:420px;
+        overflow:hidden;
+    }
+
+    .carousel{
+        width:220px;
+        height:280px;
+    }
+
+    .card{
+        width:220px;
+        height:280px;
+    }
+
+    .botones{
+        gap:40px;
+        bottom:20px;
+    }
+
+    .botones button{
+        width:50px;
+        height:50px;
+        font-size:22px;
+    }
+
+    /* -------- FOOTER -------- */
+
+    .footer{
+        text-align:center;
+    }
+
+    .socials{
+        justify-content:center;
+    }
+}
+
+/* ========================================= */
+/* MOVILES PEQUEÑOS */
+/* ========================================= */
+
+@media (max-width:480px){
+
+    .inicio{
+        min-height:450px;
+    }
+
+    .imagen-deinicio{
+        width:190px;
+    }
+
+    .bg-shape{
+        width:170%;
+        left:-60%;
+    }
+
+    .bg-shape1{
+        width:170%;
+        right:-60%;
+    }
+
+    .cz_counter_num{
+        font-size:35px;
+    }
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        gap: 20px;
+        text-align: center;
+    }
+
+
+    .contador-item p{
+        font-size:16px;
+    }
+
+    .tarjeta{
+        padding:20px;
+    }
+
+    .tarjeta h3{
+        font-size:24px;
+    }
+
+    .tarjeta h4{
+        font-size:13px;
+    }
+
+    #tituloCarrusel{
+        font-size:28px;
+    }
+
+    .carousel{
+        width:170px;
+        height:220px;
+    }
+
+    .card{
+        width:170px;
+        height:220px;
+    }
+}
