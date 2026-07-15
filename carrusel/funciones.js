@@ -1,42 +1,70 @@
 const cards = document.querySelectorAll(".card");
-
+ 
 let offset = 0;
-
+ 
 function obtenerConfiguracionResponsive(){
-
-    if(window.innerWidth <= 480){
-
+ 
+    // Móvil pequeño (coincide con el media query max-width: 375px)
+    if(window.innerWidth <= 375){
+ 
         return {
-            radio: 280,
-            centroX: 80,
+            radio: 200,
+            centroX: 60,
+            centroY: 135,
+            separacion: 55
+        };
+ 
+    }
+ 
+    // Móvil grande (coincide con el media query max-width: 480px)
+    if(window.innerWidth <= 480){
+ 
+        return {
+            radio: 300,
+            centroX: 120,
             centroY: 180,
             separacion: 50
         };
-
+ 
     }
-
+ 
+    // Tablet vertical (coincide con el media query max-width: 768px)
     if(window.innerWidth <= 768){
-
+ 
         return {
-            radio: 380,
-            centroX: 120,
-            centroY: 220,
-            separacion: 22
+            radio: 400,
+            centroX: 220,
+            centroY: 240,
+            separacion: 32
         };
-
+ 
     }
-
+ 
+    // Tablet horizontal (coincide con el media query max-width: 1024px)
     if(window.innerWidth <= 1024){
-
+ 
         return {
-            radio: 500,
+            radio: 400,
             centroX: 170,
             centroY: 260,
-            separacion: 26
+            separacion: 30
         };
-
+ 
     }
-
+ 
+    // Laptop (coincide con el media query max-width: 1439px)
+    if(window.innerWidth <= 1439){
+ 
+        return {
+            radio: 560,
+            centroX: 185,
+            centroY: 280,
+            separacion: 28
+        };
+ 
+    }
+ 
+    // Pantallas grandes (por encima de 1439px, diseño de referencia/escritorio)
     return {
         radio: 620,
         centroX: 200,
@@ -44,74 +72,74 @@ function obtenerConfiguracionResponsive(){
         separacion: 30
     };
 }
-
+ 
 function actualizarPosiciones(){
-
+ 
     const config = obtenerConfiguracionResponsive();
-
+ 
     const radio = config.radio;
     const centroX = config.centroX;
     const centroY = config.centroY;
     const separacion = config.separacion;
-
+ 
     cards.forEach((card,index)=>{
-
+ 
         const totalCards = cards.length;
-
+ 
         const posicionCircular =
             ((index + offset) % totalCards + totalCards) % totalCards;
-
+ 
         let anguloDeg;
-
-if(window.innerWidth <= 480){
-
-    anguloDeg = posicionCircular * (360 / totalCards);
-
-}else{
-
-    anguloDeg = -60 + (posicionCircular * separacion);
-
-}
-
+ 
+        if(window.innerWidth <= 480){
+ 
+            anguloDeg = posicionCircular * (360 / totalCards);
+ 
+        }else{
+ 
+            anguloDeg = -60 + (posicionCircular * separacion);
+ 
+        }
+ 
         const angulo = anguloDeg * Math.PI / 180;
-
+ 
         const x = centroX + Math.cos(angulo) * radio;
         const y = centroY + Math.sin(angulo) * radio;
-
+ 
         card.style.left = `${x}px`;
         card.style.top = `${y}px`;
-
+ 
         const distanciaCentro = Math.abs(anguloDeg);
-
+ 
         const escala = Math.max(
             window.innerWidth <= 768 ? 0.55 : 0.65,
             1 - (distanciaCentro / 120)
         );
-
+ 
         const opacidad = Math.max(
             0.2,
             1 - (distanciaCentro / 90)
         );
-
+ 
         card.style.transform = `
             translate(-50%, -50%)
             scale(${escala})
         `;
-
+ 
         card.style.opacity = opacidad;
-
+ 
         card.style.zIndex = Math.round(
             100 - distanciaCentro
         );
-
+ 
     });
-
+ 
 }
-
+ 
 actualizarPosiciones();
-
+ 
 window.addEventListener("resize", actualizarPosiciones);
-
+ 
 actualizarPosiciones();
 
 document.getElementById("down").addEventListener("click", () => {

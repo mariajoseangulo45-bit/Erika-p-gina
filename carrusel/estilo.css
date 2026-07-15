@@ -309,282 +309,258 @@ ul {
     }
 }
 
+/*------------------------*/
 
-/* ========================================= */
-/* TABLETS */
-/* ========================================= */
-
+/* ---------- TABLET HORIZONTAL (hasta 1024px) ---------- */
 @media (max-width: 1024px) {
-
-    .navbar {
-        padding: 20px;
-    }
-
-    .nav-links {
-        gap: 20px;
-    }
-
-    .informacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .titulo {
-        margin-top: 120px;
-        font-size: 20px;
-    }
-
-    .contenido-izquierda {
-        width: 100%;
-    }
-
-    .botones {
-        margin-left: 0;
-        margin-top: 40px;
-        justify-content: center;
-    }
-
-    .orbita {
-        width: 650px;
-        height: 500px;
-        margin-left: 0;
+    
+     .botones {
         margin-top: 50px;
+        gap: 10px;
+        margin-left: -100px;
     }
-
-    .circulo-central {
-        width: 520px;
-        height: 480px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        transform: translate(-50%, -50%);
-    }
-
-    .card {
-        width: 210px;
-        height: 210px;
-    }
-
-    .card h1 {
-        width: 80px;
-        font-size: 28px;
-    }
-
-    .card button {
-        margin-top: 135px;
-        font-size: 14px;
-        padding: 8px 14px;
-    }
-
-}
-
-
-/* ========================================= */
-/* MOVILES */
-/* ========================================= */
-
-@media (max-width:768px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .navbar {
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .logo {
-        height: 3rem;
-    }
-
-    .informacion {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .titulo {
-        margin-top: 100px;
+ 
+    #titulo {
+        margin-top: 65px;
+        margin-left: 130px;
         font-size: 18px;
-        text-align: center;
     }
-
-    .contenido-izquierda {
-        width: 100%;
-        align-items: center;
+ 
+    #subtitulo {
+        font-size: 13px;
+        margin-left: 65px;
+        margin-right: 65px;
     }
-
-    .botones {
-        margin-top: 20px;
-        margin-left: 0;
-        justify-content: center;
-    }
-
-    #up,
-    #down {
-        width: 45px;
-        height: 45px;
-    }
-
-    /* ---------------------- */
-    /* CARRUSEL RESPONSIVE */
-    /* ---------------------- */
-
+ 
     .orbita {
-        width: 100%;
-        height: 420px;
-        margin-left: 0;
-        margin-top: 40px;
-        overflow: hidden;
+        width: 520px;
+        height: 390px;
+        margin-left: -163px;
+        margin-top: 65px;
     }
-
+ 
     .circulo-central {
-        width: 320px;
-        height: 300px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        transform: translate(-50%, -50%);
+        width: 357px;
+        height: 325px;
+        background-size: 357px 325px;
     }
-
-    /* Las tarjetas se hacen más pequeñas
-           pero conservan el diseño original */
-
+ 
     .card {
-        width: 170px;
-        height: 170px;
-        padding: 15px;
+        width: 162px;
+        height: 162px;
+        padding: 13px;
     }
-
+ 
     .card h1 {
-        width: 70px;
-        height: 50px;
-        margin-top: -25px;
-        margin-left: -25px;
-        font-size: 22px;
-        line-height: 50px;
+        width: 65px;
+        margin-top: -26px;
+        margin-left: -26px;
     }
-
+ 
     .card button {
-        margin-top: 105px;
-        padding: 8px 12px;
+        margin-top: 117px;
+        padding: 7px 10px;
         font-size: 13px;
     }
-
-    /* imágenes más pequeñas */
-
-    #card1,
-    #card2,
-    #card3,
-    #card4,
-    #card5,
-    #card6,
-    #card7,
-    #card8,
-    #card9,
-    #card10 {
-        background-size: 170px 200px;
+ 
+    .circulo1 {
+        width: 325px;
+        height: 325px;
     }
-
-    /* ---------------------- */
-    /* MODAL */
-    /* ---------------------- */
-
+ 
+    .circulo2 {
+        width: 247px;
+        height: 247px;
+    }
+ 
+    .circulo3 {
+        width: 156px;
+        height: 156px;
+    }
+ 
+    #card1, #card2, #card3, #card4, #card5,
+    #card6, #card7, #card8, #card9, #card10 {
+        background-size: 162px 188px;
+    }
+ 
     .tarjetaModal {
-        width: 85%;
-        padding: 40px;
-        margin-top: 0;
-        background-size: cover;
+        margin-top: 65px;
+        width: 260px;
+        padding: 98px;
+        background-size: 260px 325px;
     }
-
+ 
+    .btnCerrar {
+        font-size: 17px;
+    }
 }
-
-
-/* ========================================= */
-/* CELULARES PEQUEÑOS */
-/* ========================================= */
-
-@media (max-width:480px) {
-
-    #titulo {
+ 
+/* ---------- TABLET VERTICAL (hasta 768px) ---------- */
+@media (max-width: 768px) {
+ 
+   
+    .botones {
+        margin-top: 120px;
+        gap: 10px;
+        margin-left: -10px;
+    }
+ 
+ #titulo {
         font-size: 26px;
-        margin-left: 50px;
+        margin-left: -190px;
         text-align: left;
-        margin-top: 100px;
+        margin-top: 700px;
     }
     #subtitulo{
         margin-left: auto;
-        margin-right: auto;
+        margin-right: 30px;
     }
-
+ 
     .orbita {
-        height: 500px;
-        width: 100%;
-    overflow:visible;
+        width: 400px;
+        height: 300px;
+        margin-left: -120px;
+        margin-top: 80px;
+        
     }
-
-    /* MAPA MÁS GRANDE */
+ 
     .circulo-central {
-          width: 400px;
-    height: 300px;
-
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    left: 30%;
-    top: 40%;
-
-    transform: translate(-50%, -40%);
+        margin-top: 80px;
+        margin-left: 50px;
+        width: 375px;
+        height: 350px;
+        background-size: 375px 350px;
     }
-
-    /* TARJETAS MÁS PEQUEÑAS Y SEPARADAS */
+ 
     .card {
-        width: 120px;
-        height: 140px;
+        width: 200px;
+        height: 200px;
         padding: 10px;
     }
-
+ 
     .card h1 {
-        width: 65px;
-        height: 45px;
-        font-size: 20px;
-
-        margin-top: -18px;
-        margin-left: -18px;
+        width: 70px;
+        margin-top: -20px;
+        margin-left: -20px;
+        font-size: 25px;
     }
-
+ 
     .card button {
-        margin-top: 105px;
-        padding: 7px 12px;
-        font-size: 12px;
+        margin-top: 140px;
+        padding: 5px 8px;
+        font-size: 18px;
     }
-
-    #card1,
-    #card2,
-    #card3,
-    #card4,
-    #card5,
-    #card6,
-    #card7,
-    #card8,
-    #card9,
-    #card10 {
-        background-size: 120px 140px;
+ 
+    .circulo1 {
+        width: 250px;
+        height: 250px;
     }
-
+ 
+    .circulo2 {
+        width: 190px;
+        height: 190px;
+    }
+ 
+    .circulo3 {
+        width: 120px;
+        height: 120px;
+    }
+ 
+    #card1, #card2, #card3, #card4, #card5,
+    #card6, #card7, #card8, #card9, #card10 {
+        background-size: 125px 145px;
+    }
+ 
     .tarjetaModal {
-        width: 100%;
-        padding: 40px 40px;
-        margin-right: 50px;
-        margin-top: 60px;
+       margin-top: 38px;
+        width: 350px;
+        height: 250px;
+        padding: 57px;
+        background-size: 250px 300px;
+    }
+ 
+    .btnCerrar {
+        font-size: 30px;
+        background-color: #dedede;
+        border-radius: 100%;
     }
 
 }
+
+ 
+/* ---------- MÓVIL GRANDE (hasta 480px) ---------- */
+@media (max-width: 480px) {
+
+    .botones {
+        margin-top: 107px;
+        gap: 15px;
+        margin-left: -50px;
+       
+    }
+ 
+ 
+    #titulo {
+        font-size: 26px;
+        margin-left: -180px;
+        text-align: left;
+        margin-top: 600px;
+    }
+    #subtitulo{
+        margin-left: auto;
+        margin-right: 15px;
+    }
+ 
+    .orbita {
+        width: 304px;
+        height: 228px;
+        margin-left: -95px;
+        margin-top: 100px;
+    }
+ 
+    .circulo-central {
+        width: 249px;
+        height: 290px;
+        background-size: 300px 290px;
+        margin-top: 60px;
+    }
+ 
+    .card {
+        width: 130px;
+        height: 130px;
+        padding: 8px;
+    }
+ 
+    .card h1 {
+        width: 58px;
+        margin-top: -10px;
+        margin-left: -15px;
+        font-size: 20px;
+    }
+ 
+    .card button {
+        margin-top: 110px;
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+ 
+    
+ 
+    #card1, #card2, #card3, #card4, #card5,
+    #card6, #card7, #card8, #card9, #card10 {
+        background-size: 140px 150px;
+    }
+ 
+    .tarjetaModal {
+        margin-top: 38px;
+        width: 152px;
+        padding: 57px;
+        background-size: 250px 300px;
+    }
+ 
+    .btnCerrar {
+        font-size: 30px;
+        background-color: #dedede;
+        border-radius: 100%;
+    }
+}
+ 
