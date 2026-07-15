@@ -581,8 +581,10 @@ ul {
     }
 
     .tarjetaModal {
-        width: 90%;
-        padding: 30px 20px;
+        width: 100%;
+        padding: 40px 40px;
+        margin-right: 50px;
+        margin-top: 60px;
     }
 
 }
