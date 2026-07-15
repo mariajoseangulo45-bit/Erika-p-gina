@@ -136,7 +136,7 @@ ul {
     position: absolute;
     width: 550px;
     height: 500px;
-    background-image: url(/imagenes/erikaMapa.png);
+    background-image: url(imagenesCrru/erikaMapa.png);
     background-size: 550px 500px;
     top: 50%;
     left: 50%;
@@ -207,22 +207,22 @@ ul {
 }
 
 #card1 {
-    background-image: url(/imagenes/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
+    background-image: url(imagenesCrru/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
     background-size: 250px 290px;
 }
 
 #card2 {
-    background-image: url(/imagenes/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
+    background-image: url(imagenesCrru/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
     background-size: 250px 290px;
 }
 
 #card3 {
-    background-image: url(/imagenes/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
+    background-image: url(imagenesCrru/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
     background-size: 250px 290px;
 }
 
 #card4 {
-    background-image: url(/imagenes/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
+    background-image: url(imagenesCrru/75c36e12-8996-4360-9bb5-3f83813c891b.jpg);
     background-size: 250px 290px;
 }
 
@@ -282,7 +282,7 @@ ul {
     text-align: center;
     position: relative;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    background-image: url(/imagenes/patron.png);
+    background-image: url(imagenesCrru/patron.png);
     background-size: 400px 500px;
 
     animation: aparecer 0.3s ease;
