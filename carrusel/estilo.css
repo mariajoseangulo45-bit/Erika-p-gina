@@ -87,10 +87,10 @@ ul {
 }
 
 .botones {
-    margin-top: 150px;
+    margin-top: -20px;
     display: flex;
     gap: 20px;
-    margin-left: 400px;
+    margin-left: -250px;
 
 }
 
@@ -495,13 +495,12 @@ ul {
         margin-top: 107px;
         gap: 15px;
         margin-left: -50px;
-       
     }
  
- 
+
     #titulo {
         font-size: 26px;
-        margin-left: -180px;
+        margin-left: -120px;
         text-align: left;
         margin-top: 600px;
     }
@@ -513,14 +512,14 @@ ul {
     .orbita {
         width: 304px;
         height: 228px;
-        margin-left: -95px;
+        margin-left: -140px;
         margin-top: 100px;
     }
  
     .circulo-central {
-        width: 249px;
-        height: 290px;
-        background-size: 300px 290px;
+        width: 230px;
+        height: 260px;
+        background-size: 250px 260px;
         margin-top: 60px;
     }
  
@@ -552,6 +551,7 @@ ul {
  
     .tarjetaModal {
         margin-top: 38px;
+        margin-right: 100px;
         width: 152px;
         padding: 57px;
         background-size: 250px 300px;
