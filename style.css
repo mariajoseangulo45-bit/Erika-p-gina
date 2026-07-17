@@ -292,7 +292,198 @@ ul{
     transform:scale(1.1);
 }
 
+/* CARRUSEL */
+/* ========================= */
 
+.skills-section{
+    position:relative;
+    padding:60px 70px;
+}
+
+.skills{
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.skills::-webkit-scrollbar{
+    display: none;
+}
+
+.tarjetones{
+    min-width:320px;
+    height:420px;
+
+    background:white;
+
+    border-radius:25px;
+
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.tarjetones:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:70px;
+    margin-bottom:25px;
+}
+
+.tarjetones h3{
+    font-size:2rem;
+    margin-bottom:30px;
+    color:#222;
+}
+
+
+.btn-modal{
+    padding:14px 40px;
+    border:none;
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #E000D3,
+        #7c3aed
+    );
+
+    color:white;
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-modal:hover{
+    transform:scale(1.05);
+}
+
+/* ========================= */
+/* FLECHAS */
+/* ========================= */
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:10;
+}
+
+.left{
+    left:10px;
+}
+
+.right{
+    right:10px;
+}
+
+.arrow:hover{
+    transform:translateY(-50%) scale(1.1);
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.6);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:90%;
+    max-width:500px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    position:relative;
+
+    animation:aparecer .3s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:10px;
+
+    font-size:35px;
+
+    cursor:pointer;
+}
+
+.modal-content h2{
+    color:#3b82f6;
+    margin-bottom:20px;
+}
+
+.modal-content p{
+    line-height:1.8;
+    color:#555;
+}
 
 /*------------------------*/
 .footer{
